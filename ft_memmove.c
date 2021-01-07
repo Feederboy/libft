@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 14:00:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:50:47 by maquentr         ###   ########.fr       */
+/*   Created: 2021/01/07 14:54:35 by maquentr          #+#    #+#             */
+/*   Updated: 2021/01/07 15:02:22 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	size_t len;
 	size_t i;
+	unsigned char *ss1;
+	unsigned char *ss2;
 
 	i = 0;
-	while ((src[i]) && i + 1 < size)
+	ss1 = (unsigned char)s1;
+	ss2 = (unsigned char)s2;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	while (i < n)
 	{
-		dest[i] = src[i];
+		ss1[i] = ss2[i];
 		i++;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	len = 0;
-	while (src[len])
-		len++;
-	return (len);
+	return ((void*)ss1);
 }

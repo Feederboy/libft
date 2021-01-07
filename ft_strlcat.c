@@ -6,16 +6,16 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 14:00:09 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/05 14:00:11 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/07 16:50:12 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int r;
+	size_t i;
+	size_t j;
+	size_t r;
 
 	i = 0;
 	j = 0;

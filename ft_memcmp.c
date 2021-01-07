@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 14:00:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:50:47 by maquentr         ###   ########.fr       */
+/*   Created: 2021/01/07 15:32:16 by maquentr          #+#    #+#             */
+/*   Updated: 2021/01/07 16:34:43 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t len;
 	size_t i;
+	unsigned char *ss1;
+	unsigned char *ss2;
 
 	i = 0;
-	while ((src[i]) && i + 1 < size)
+	ss1 = s1;
+	ss2 = s2;
+	while (ss1[i] && ss2[i] && i < n - 1)
 	{
-		dest[i] = src[i];
+		if (ss1[i] != ss2[i])
+			break ;
 		i++;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	len = 0;
-	while (src[len])
-		len++;
-	return (len);
+	return ((void*)ss1[i] - (void*)ss2[i]);
 }
+

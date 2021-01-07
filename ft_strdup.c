@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 14:00:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:50:47 by maquentr         ###   ########.fr       */
+/*   Created: 2021/01/07 15:38:24 by maquentr          #+#    #+#             */
+/*   Updated: 2021/01/07 17:28:34 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t len;
-	size_t i;
+	int len;
+	int i;
+	char *res;
 
 	i = 0;
-	while ((src[i]) && i + 1 < size)
+	len = ft_strlen(s);
+	res = malloc(sizeof(char)*(len + 1));
+	if (!res)
+		return (NULL);
+	while (s[i])
 	{
-		dest[i] = src[i];
+		res[i] = s[i];
 		i++;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	len = 0;
-	while (src[len])
-		len++;
-	return (len);
+	res[i] = '\0';
+	return (res);
 }
