@@ -6,7 +6,7 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 23:55:13 by matt              #+#    #+#             */
-/*   Updated: 2021/01/08 00:29:12 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/08 00:30:26 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(const char *s, char c)
 		res[i] = ft_substr(s, 0, len);
 		if (res[i] = '\0')
 			return (NULL);
-		s = s = ft_taille_word(s, c);
+		s = s + ft_taille_word(s, c);
 		i++;
 	}
 	res[i] = NULL;
