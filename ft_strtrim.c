@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:42:57 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/08 15:30:34 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/08 17:29:06 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = 0;
 	len = ft_strlen_const(s1) - ft_nbsep(s1, set);
 	if (len <= 0)
-		return (NULL);
+		len = 0;
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
@@ -106,7 +106,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-	char *t = "salut cmt ca giiii";
+	char *t = "";
 	char *sep = "sai";
 	printf("%s\n", ft_strtrim(t, sep));
 	return (0);
