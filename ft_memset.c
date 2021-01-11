@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 16:25:46 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/05 16:37:10 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/11 20:45:29 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -25,20 +25,4 @@ void	*ft_memset(void *str, int c, size_t len)
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char str[50];
-	char tmp[50];
-	strcpy(str, "This is string.h library function");
-	strcpy(tmp, "This is string.h library function !!!!!");
-	puts(str);
-	puts(tmp);
-	memset(str, '$', 7);
-	memset(tmp, '$', 7);
-	puts(str);
-	puts(tmp);
-
-	return (0);
 }

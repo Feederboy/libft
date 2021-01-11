@@ -6,23 +6,11 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 17:08:53 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/11 17:50:10 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/11 20:38:00 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
 #include "libft.h"
-
-/*
- *
- *
- *
- *				TO BE CORRECTED
- *
- *
- *
- */
-
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -39,20 +27,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
-}
-
-int main()
-{
-
-	char original[50];
-	char newcopy[50];
-
-	strcpy(original, "C memcpy at Tech0nTheNet.com");
-	puts(newcopy);
-	memcpy(newcopy, original, 24);
-	newcopy[24] = 0;
-	puts(newcopy);
-
-
-	return (0);
 }
