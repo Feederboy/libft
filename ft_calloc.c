@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 16:21:01 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:25:12 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:44:40 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void *ptr;
-	ptr = malloc(count * size);
+	ptr = malloc(nitems * size);
 	if (!ptr)
 		return (NULL);
-	ptr = ft_bzero(ptr, count);
+	ptr = ft_bzero(ptr, nitems);
 	return (ptr);
 }

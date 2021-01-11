@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 15:32:16 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:34:43 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:05:07 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char *ss2;
 
 	i = 0;
-	ss1 = s1;
-	ss2 = s2;
-	while (ss1[i] && ss2[i] && i < n - 1)
+	ss1 = (unsigned char *)s1;
+	ss2 = (unsigned char *)s2;
+	while (ss1[i] && ss2[i] && i < n)
 	{
 		if (ss1[i] != ss2[i])
 			break ;
 		i++;
 	}
-	return ((void*)ss1[i] - (void*)ss2[i]);
+	return (ss1[i] - ss2[i]);
 }
 

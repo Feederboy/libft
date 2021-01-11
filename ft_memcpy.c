@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 17:08:53 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/05 17:26:36 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:50:10 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -31,8 +31,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char *q;
 
 	i = 0;
-	p = src;
-	q = dst;
+	p = (const char *)src;
+	q = (char *)dst;
 	while (i < n)
 	{
 		q[i] = p[i];

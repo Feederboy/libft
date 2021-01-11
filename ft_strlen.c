@@ -6,15 +6,16 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 20:20:37 by matt              #+#    #+#             */
-/*   Updated: 2021/01/04 20:45:18 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/11 17:43:32 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
     int i;
 
     i = 0;
     while (str[i])
         i++;
+	return (i);
 }

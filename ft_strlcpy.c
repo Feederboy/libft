@@ -6,10 +6,11 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 14:00:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/07 16:50:47 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:23:00 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
