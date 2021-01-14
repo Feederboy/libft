@@ -6,12 +6,11 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:05:27 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/08 12:42:29 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/14 18:10:22 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
 {
@@ -51,11 +50,4 @@ char	*ft_itoa(int n)
 	res[size] = '\0';
 	nbrtobase((unsigned int)n, &res, size - 1, "0123456789");
 	return (res);
-}
-
-#include <stdlib.h>
-int main()
-{
-	printf("%s\n", ft_itoa(789456));
-	return (0);
 }

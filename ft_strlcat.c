@@ -6,31 +6,33 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 14:00:09 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/13 16:47:20 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/14 14:56:48 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	size_t r;
+	size_t	i;
+	size_t	sizedest;
+	size_t	sizesrc;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	r = 0;
-	while (dest[i])
+	sizedest = ft_strlen(dst);
+	sizesrc = ft_strlen(src);
+	if (size <= 0)
+		return (sizesrc);
+	if (size <= (unsigned int)sizedest)
+		return (sizesrc + size);
+	while (dst[i])
 		i++;
-	while (src[r])
-		r++;
-	if (size <= i)
-		r += size;
-	else
-		r += i;
-	while (src[j] && i + 1 < size)
-		dest[i++] = src[j++];
-	dest[i] = '\0';
-	return (r);
+	while (src[j] && i < size - 1)
+	{
+		dst[i++] = src[j++];
+	}
+	dst[i] = '\0';
+	return (sizedest + sizesrc);
 }

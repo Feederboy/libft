@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:42:57 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/11 18:09:46 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/14 18:48:42 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		ft_pos(const char *s, const char *set)
 	if (!ft_strlen(s))
 		return (0);
 	j = ft_strlen(s) - 1;
-	while (s[j] && ft_sep(s[j], set))
+	while (j && ft_sep(s[j], set))
 	{
 		j--;
 	}
@@ -77,15 +77,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	k = 0;
 	len = ft_strlen(s1) - ft_nbsep(s1, set);
-	if (len <= 0)
-		len = 0;
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	while (s1[i] && ft_sep(s1[i], set))
 		i++;
 	j = ft_pos(s1, set);
-	while (s1[i] && i <= j)
+	while (s1[i] && (i <= j && j != 0))
 	{
 		res[k++] = s1[i++];
 	}

@@ -6,44 +6,57 @@
 #    By: matt <maquentr@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/11 16:30:31 by matt              #+#    #+#              #
-#    Updated: 2021/01/11 16:31:59 by matt             ###   ########.fr        #
+#    Updated: 2021/01/14 16:18:43 by maquentr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
-					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
-					ft_itoa.c ft_memcpy.c  ft_putendl_fd.c ft_strchr.c  ft_strlcpy.c \
-					ft_strnstr.c ft_tolower.c ft_bzero.c   ft_isascii.c ft_memccpy.c \
-					ft_memmove.c ft_putnbr_fd.c  ft_strdup.c  ft_strlen.c  ft_strrchr.c \
-					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c  \
-					ft_putstr_fd.c  ft_strjoin.c ft_strmapi.c ft_strtrim.c
-OBJS			= $(SRCS:.c=.o)
+NAME=libft.a
 
-BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
-					ft_lstmap.c ft_lstnew.c ft_lstsize.c
-BONUS_OBJS		= $(BONUS:.c=.o)
+CC=gcc
 
-CC				= gcc
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS=-Wall -Wextra -Werror
 
-NAME			= libft.a
+RM=rm -f
 
-all:			$(NAME)
+INC=libft.h
 
-$(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+SRC=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
+ft_memmove.c ft_memchr.c ft_memcmp.c \
+ft_strlen.c ft_strdup.c ft_calloc.c \
+ft_strlcat.c ft_strlcpy.c ft_strchr.c ft_strrchr.c ft_strnstr.c \
+ft_strncmp.c ft_atoi.c ft_itoa.c \
+ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+ft_toupper.c ft_tolower.c \
+ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+
+BON=ft_lstnew.c ft_lstadd_front.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+ft_isupper_bonus.c ft_islower_bonus.c \
+ft_isspace_bonus.c ft_isgraph_bonus.c ft_iscntrl_bonus.c ft_ispunct_bonus.c ft_isxdigit_bonus.c
+
+OBJ=$(SRC:.c=.o)
+
+BONUS_OBJ= $(BON:.c=.o)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< $(INC)
+
+$(NAME): $(OBJ)
+	ar rcs	$(NAME)	$(OBJ)
+
+all: $(NAME)
+
+bonus:
+	@make	all	OBJ="$(OBJ) $(BONUS_OBJ)"
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
-fclean:			clean
-				$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME) 
 
-re:				fclean $(NAME)
+re: fclean all
 
-bonus:			$(OBJS) $(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-.PHONY:			all clean fclean re bonus
+.PHONY: clean fclean
