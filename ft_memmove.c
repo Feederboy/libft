@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 14:54:35 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/11 20:45:02 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/13 16:07:05 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	ss2 = (unsigned char *)s2;
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	while (i < n)
-	{
-		ss1[i] = ss2[i];
-		i++;
-	}
+	if (s1 > s2)
+		while (i < n)
+		{
+			ss1[n - 1] = ss2[n - 1];
+			n--;
+		}
+	else
+		while (i < n)
+		{
+			ss1[i] = ss2[i];
+			i++;
+		}
+
 	return ((void*)ss1);
 }
