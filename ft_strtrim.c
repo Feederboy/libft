@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:42:57 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/14 18:48:42 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/15 13:36:43 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_nbsep(const char *s, const char *set)
 		nb++;
 		i++;
 	}
-	while (s[j] && ft_sep(s[j], set))
+	while (s[j] && ft_sep(s[j], set) && j > i - 1)
 	{
 		nb++;
 		j--;
@@ -50,14 +50,14 @@ int		ft_nbsep(const char *s, const char *set)
 	return (nb);
 }
 
-int		ft_pos(const char *s, const char *set)
+int		ft_pos(const char *s, const char *set, int i)
 {
 	int j;
 
 	if (!ft_strlen(s))
 		return (0);
 	j = ft_strlen(s) - 1;
-	while (j && ft_sep(s[j], set))
+	while (j && ft_sep(s[j], set) && i < j)
 	{
 		j--;
 	}
@@ -82,8 +82,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (s1[i] && ft_sep(s1[i], set))
 		i++;
-	j = ft_pos(s1, set);
-	while (s1[i] && (i <= j && j != 0))
+	j = ft_pos(s1, set, i - 1);
+	while (s1[i] && i <= j && j != 0)
 	{
 		res[k++] = s1[i++];
 	}

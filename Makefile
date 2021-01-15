@@ -6,7 +6,7 @@
 #    By: matt <maquentr@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/11 16:30:31 by matt              #+#    #+#              #
-#    Updated: 2021/01/14 16:18:43 by maquentr         ###   ########.fr        #
+#    Updated: 2021/01/15 15:02:44 by maquentr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,6 @@ ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BON=ft_lstnew.c ft_lstadd_front.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
-ft_isupper_bonus.c ft_islower_bonus.c \
-ft_isspace_bonus.c ft_isgraph_bonus.c ft_iscntrl_bonus.c ft_ispunct_bonus.c ft_isxdigit_bonus.c
 
 OBJ=$(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 14:30:21 by matt              #+#    #+#             */
-/*   Updated: 2021/01/11 14:33:51 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/15 17:55:55 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	(*f)(lst);
-	while (lst->next)
+	while (lst)
 	{
+		(*f)(lst->content);
 		lst = lst->next;
-		(*f)(lst);
 	}
 }

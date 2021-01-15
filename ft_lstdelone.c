@@ -6,7 +6,7 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 14:16:35 by matt              #+#    #+#             */
-/*   Updated: 2021/01/11 14:34:17 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/15 16:48:49 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
-	{
 		(*del)(lst->content);
 		free(lst);
-	}
 }
