@@ -6,7 +6,7 @@
 /*   By: maquentr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 15:13:39 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 18:34:00 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/18 19:27:20 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	len1;
-	int	len2;
-	int	i;
-	int	j;
+	int		len1;
+	int		len2;
+	int		i;
+	int		j;
 	char	*res;
 
 	i = 0;

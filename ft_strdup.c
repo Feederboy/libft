@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 15:38:24 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 18:01:24 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/18 19:36:30 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	len;
-	int	i;
+	int		len;
+	int		i;
 	char	*res;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 17:28:20 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/11 17:35:40 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/18 19:45:55 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t i;
-	unsigned char *ddst;
-	unsigned char *ssrc;
+	size_t			i;
+	unsigned char	*ddst;
+	unsigned char	*ssrc;
 
 	i = 0;
 	ssrc = (unsigned char *)src;

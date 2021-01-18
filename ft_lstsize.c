@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:05:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 17:45:31 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/18 19:32:57 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	len;
+	int		len;
 	t_list	*curr;
 
 	curr = lst;

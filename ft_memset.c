@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 16:25:46 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 17:57:37 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/18 19:35:39 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	*ft_memset(void *str, int c, size_t len)
 {
 	unsigned char	*p;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	p = str;
