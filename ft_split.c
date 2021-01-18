@@ -6,7 +6,7 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 23:55:13 by matt              #+#    #+#             */
-/*   Updated: 2021/01/14 18:07:57 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/18 18:00:52 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ int		ft_nbwords(const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	char **res;
-	int i;
-	int nb_words;
-	int len;
+	char	**res;
+	int	i;
+	int	nb_words;
+	int	len;
 
 	i = 0;
 	if (!s)

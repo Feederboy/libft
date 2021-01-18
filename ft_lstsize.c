@@ -6,16 +6,16 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:05:19 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/15 15:10:01 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/18 17:45:31 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int len;
-	t_list *curr;
+	int	len;
+	t_list	*curr;
 
 	curr = lst;
 	len = 0;

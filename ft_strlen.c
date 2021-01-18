@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 20:20:37 by matt              #+#    #+#             */
-/*   Updated: 2021/01/11 17:43:32 by matt             ###   ########.fr       */
+/*   Created: 2021/01/18 18:06:48 by matt              #+#    #+#             */
+/*   Updated: 2021/01/18 18:07:48 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_strlen(const char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (str[i])
-        i++;
+	i = 0;
+	while (str[i])
+		i++;
 	return (i);
 }

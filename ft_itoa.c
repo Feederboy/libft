@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:05:27 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/14 18:10:22 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/18 17:34:38 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
 {
-
 	if (nbr >= 10)
 	{
 		nbrtobase(nbr / 10, str, pos - 1, "0123456789");
@@ -24,7 +23,7 @@ void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
 		(*str)[pos] = base_to[nbr % 10];
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		i;
 	int		size;

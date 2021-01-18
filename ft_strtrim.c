@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:42:57 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/15 13:36:43 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/18 18:27:33 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,13 @@ int		ft_pos(const char *s, const char *set, int i)
 	return (j);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	char *res;
-	int i;
-	int j;
-	int k;
-	int len;
+	char	*res;
+	int	i;
+	int	j;
+	int	k;
+	int	len;
 
 	if (!s1 || !set)
 		return (NULL);

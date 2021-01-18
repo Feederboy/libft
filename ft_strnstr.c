@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 13:15:51 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/13 17:49:21 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/18 18:10:53 by matt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char *str = "lorem ipsum dolor sit amet";
-	char *find = "dolor";
-	char *ptr;
-	char *tmp;
-	ptr = strnstr(str, find, 15);
-	tmp = ft_strnstr(str, find, 15);
-	printf("OFFI = %s\n", ptr);
-	printf("ft = %s\n", tmp);
-	return 0;
-} */
