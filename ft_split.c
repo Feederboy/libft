@@ -6,7 +6,7 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 23:55:13 by matt              #+#    #+#             */
-/*   Updated: 2021/01/18 19:36:11 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/19 12:33:55 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_taille_word(const char *s, char c)
 	return (len);
 }
 
-int		ft_sep(char curr, char c)
+int		ft_sepe(char curr, char c)
 {
 	return (curr == c);
 }
@@ -36,16 +36,26 @@ int		ft_nbwords(const char *s, char c)
 	i = 0;
 	while (*s)
 	{
-		if (ft_sep(*s, c))
+		if (ft_sepe(*s, c))
 			s++;
 		else
 		{
-			while (*s && !ft_sep(*s, c))
+			while (*s && !ft_sepe(*s, c))
 				s++;
 			len++;
 		}
 	}
 	return (len);
+}
+
+char	**ft_free(char **res, int i)
+{
+	while (i >= 0)
+	{
+		free(res[i]);
+		i--;
+	}
+	return (res);
 }
 
 char	**ft_split(const char *s, char c)
@@ -62,15 +72,16 @@ char	**ft_split(const char *s, char c)
 	res = malloc(sizeof(char *) * (nb_words + 1));
 	if (!res)
 		return (NULL);
-	while (nb_words > 0)
+	while (nb_words-- > 0)
 	{
 		while (*s && *s == c)
 			s++;
 		len = ft_taille_word(s, c);
 		res[i] = ft_substr(s, 0, len);
+		if (!res[i])
+			return (ft_free(res, i));
 		s = s + len;
 		i++;
-		nb_words--;
 	}
 	res[i] = NULL;
 	return (res);
