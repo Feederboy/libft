@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:32:28 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 18:14:23 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/23 14:47:21 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*res;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);

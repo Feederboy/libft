@@ -6,19 +6,19 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 13:59:06 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 17:30:13 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/22 12:30:59 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(char c)
+static int		ft_isspace(char c)
 {
 	return (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f' ||
 			c == ' ');
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int i;
 	int sign;

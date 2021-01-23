@@ -6,13 +6,11 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 15:52:48 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/08 16:20:03 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/22 12:36:51 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

@@ -6,13 +6,13 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:05:27 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 17:34:38 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/22 12:34:55 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
+static void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
 {
 	if (nbr >= 10)
 	{
@@ -23,7 +23,7 @@ void		nbrtobase(unsigned int nbr, char **str, int pos, char *base_to)
 		(*str)[pos] = base_to[nbr % 10];
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		i;
 	int		size;

@@ -6,13 +6,13 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 12:42:57 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 19:31:24 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/22 12:41:55 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_sep(char curr, const char *set)
+static int		ft_sep(char curr, const char *set)
 {
 	int i;
 
@@ -26,7 +26,7 @@ int		ft_sep(char curr, const char *set)
 	return (0);
 }
 
-int		ft_nbsep(const char *s, const char *set)
+static int		ft_nbsep(const char *s, const char *set)
 {
 	int i;
 	int j;
@@ -50,7 +50,7 @@ int		ft_nbsep(const char *s, const char *set)
 	return (nb);
 }
 
-int		ft_pos(const char *s, const char *set, int i)
+static int		ft_pos(const char *s, const char *set, int i)
 {
 	int j;
 
@@ -64,7 +64,7 @@ int		ft_pos(const char *s, const char *set, int i)
 	return (j);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char			*ft_strtrim(const char *s1, const char *set)
 {
 	char	*res;
 	int		i;

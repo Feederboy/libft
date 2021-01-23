@@ -6,12 +6,11 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 13:15:51 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 18:10:53 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/22 12:41:15 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {

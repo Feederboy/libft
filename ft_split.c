@@ -6,13 +6,13 @@
 /*   By: matt <maquentr@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 23:55:13 by matt              #+#    #+#             */
-/*   Updated: 2021/01/19 12:33:55 by maquentr         ###   ########.fr       */
+/*   Updated: 2021/01/22 12:29:55 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_taille_word(const char *s, char c)
+static int		ft_taille_word(const char *s, char c)
 {
 	int len;
 
@@ -22,12 +22,12 @@ int		ft_taille_word(const char *s, char c)
 	return (len);
 }
 
-int		ft_sepe(char curr, char c)
+static int		ft_sepe(char curr, char c)
 {
 	return (curr == c);
 }
 
-int		ft_nbwords(const char *s, char c)
+static int		ft_nbwords(const char *s, char c)
 {
 	int len;
 	int i;
@@ -48,7 +48,7 @@ int		ft_nbwords(const char *s, char c)
 	return (len);
 }
 
-char	**ft_free(char **res, int i)
+static char		**ft_free(char **res, int i)
 {
 	while (i >= 0)
 	{
@@ -58,7 +58,7 @@ char	**ft_free(char **res, int i)
 	return (res);
 }
 
-char	**ft_split(const char *s, char c)
+char			**ft_split(const char *s, char c)
 {
 	char	**res;
 	int		i;

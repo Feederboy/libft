@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:09:18 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 17:38:01 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/23 15:06:04 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
+	while (lst && lst->next)
 	{
 		lst = lst->next;
 	}

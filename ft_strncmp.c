@@ -6,7 +6,7 @@
 /*   By: maquentr <maquentr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 14:00:34 by maquentr          #+#    #+#             */
-/*   Updated: 2021/01/18 18:10:27 by matt             ###   ########.fr       */
+/*   Updated: 2021/01/23 15:02:52 by maquentr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 
+	if (!s1 || !s2)
+		return (0);
 	if (n < 1)
 		return (0);
 	i = 0;
